@@ -1,12 +1,10 @@
-// ABSTRACT CLASS: Student - Base class for all student types
-// DEMONSTRATES: INHERITANCE (extends Person), COMPOSITION
+
 abstract class Student extends Person implements Enrollable, Payable {
-    // COMPOSITION: Student HAS-A Transcript (strong ownership)
-    // COMPOSITION: Student HAS-A EnrollmentRecord (strong ownership)
+    // COMPOSITION
     private Transcript transcript;
     private EnrollmentRecord enrollmentRecord;
 
-    // ENCAPSULATION: Private fields
+    // ENCAPSULATION
     private String studentType;
     private double tuitionFees;
     private boolean isActive;
@@ -21,18 +19,18 @@ abstract class Student extends Person implements Enrollable, Payable {
         this.isActive = true;
     }
 
-    // ENCAPSULATION: Controlled access to GPA
+    // ENCAPSULATION
     public double getGPA() {
         return transcript.calculateGPA();
     }
 
-    // POLYMORPHISM: Override from Person
+    // POLYMORPHISM
     @Override
     String getRole() {
         return studentType;
     }
 
-    // POLYMORPHISM: Override abstract method
+    // POLYMORPHISM
     @Override
     abstract void displayDashboard();
 

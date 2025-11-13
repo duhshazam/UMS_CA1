@@ -1,6 +1,6 @@
 
 abstract class Person {
-    // ENCAPSULATION: Private fields - data is protected
+    // ENCAPSULATION
     private String personId;
     private String name;
     private String email;
@@ -14,12 +14,12 @@ abstract class Person {
         this.phoneNumber = phoneNumber;
     }
 
-    // ABSTRACT METHODS: Subclasses MUST implement these
-    // DEMONSTRATES: ABSTRACTION
+
+    // ABSTRACTION
     abstract String getRole();
     abstract void displayDashboard();
 
-    // Getters - ENCAPSULATION: Controlled access to private data
+    // ENCAPSULATION
     public String getPersonId() {
         return personId;
     }
@@ -36,7 +36,7 @@ abstract class Person {
         return phoneNumber;
     }
 
-    // Method: Display personal info
+    // Method
     public void displayPersonalInfo() {
         System.out.println("ID: " + personId);
         System.out.println("Name: " + name);

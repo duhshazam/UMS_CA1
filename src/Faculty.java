@@ -1,11 +1,11 @@
 
 abstract class Faculty extends Person implements Teachable, Payable {
-    // ENCAPSULATION: Private fields
+    // ENCAPSULATION
     private double salary;
     private String department;
     private String employmentStatus;
 
-    // COMPOSITION: Faculty HAS-A ResearchProfile (strong ownership)
+    // COMPOSITION
     private ResearchProfile researchProfile;
 
     // Constructor
